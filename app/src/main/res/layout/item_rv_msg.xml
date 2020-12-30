@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:background="@drawable/bg_white_radius11"
+    android:padding="15dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/tvMsgTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        tools:text="德国GDANNY D9 14寸锂电池小型电瓶"
+        android:textColor="#FF232323"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/tvMsgTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_alignParentRight="true"
+        android:layout_alignBottom="@id/tvMsgTitle"
+        tools:text="14:00"
+        android:textColor="#FFA8A7A7"
+        android:textSize="13dp" />
+
+    <TextView
+        android:id="@+id/tvMsgDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:layout_marginTop="6dp"
+        android:layout_below="@id/tvMsgTitle"
+        tools:text="到手价只要1999元，更享12期分期免息，戳>>"
+        android:textColor="#FFA8A7A7"
+        android:textSize="11dp" />
+
+</RelativeLayout>

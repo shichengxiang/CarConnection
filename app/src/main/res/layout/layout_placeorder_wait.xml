@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#47000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llBefore_topTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等待修车师傅接单"
+                android:textColor="#FF191919"
+                android:textSize="18dp" />
+
+            <ProgressBar
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="6dp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tvSuccess_topTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="17dp"
+            android:text="修车师傅正在快速赶来"
+            android:textColor="#FF191919"
+            android:textSize="18dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvWaitTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="9dp"
+            android:text="请稍作等待"
+            android:textColor="#FF9F9F9F"
+            android:textSize="12dp" />
+        <TextView
+            android:id="@+id/tvTimeOutTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="9dp"
+            android:text="订单已超时!"
+            android:textColor="#FF9F9F9F"
+            android:drawableLeft="@drawable/ic_error"
+            android:drawablePadding="5dp"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="17dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llTimeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="26dp"
+            android:paddingBottom="26dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:text="约等"
+                android:textColor="#FF9F9F9F"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvCountDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="00:00"
+                android:textColor="#FF191919"
+                android:textSize="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSuccessLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/ivSuccessHead"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@mipmap/img_default_image"
+                android:scaleType="fitCenter"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical">
+                <RelativeLayout
+                    android:id="@+id/rl_topName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tvSuccess_masterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="姓名"
+                        android:textColor="#FF333333"
+                        android:layout_toLeftOf="@id/tvSuccess_OrderNum"
+                        android:textSize="16dp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/tvSuccess_OrderNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="已接：单"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="18dp"
+                        android:textColor="#FFB8B8B8"
+                        android:textSize="11dp"/>
+                </RelativeLayout>
+                <TextView
+                    android:id="@+id/tvSuccess_masterBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="本店专营"
+                    android:textSize="12dp"
+                    android:textColor="#797979"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tvCommentNums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="评价（25）"
+                        android:textColor="#B3B3B3"
+                        android:textSize="11dp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="9：00-18：00"
+                        android:textColor="#B3B3B3"
+                        android:textSize="11dp"
+                        android:drawableLeft="@drawable/ic_time"
+                        android:drawablePadding="6dp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/line_color" />
+
+        <LinearLayout
+            android:id="@+id/llWaitLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvWait_cancelOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:padding="12dp"
+                android:text="取消订单" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llTimeOutLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTimeOut_cancleOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:text="取消订单" />
+            <TextView
+                android:id="@+id/tvTimeOut_replaceOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12dp"
+                android:padding="12dp"
+                android:text="继续等待" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSuccessBottomLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tvSuccess_callService"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="12dp"
+                android:textSize="12dp"
+                android:textColor="@color/black_2"
+                android:text="客服电话" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

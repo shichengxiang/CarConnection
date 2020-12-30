@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="3dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvOrderNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+                android:gravity="center_vertical"
+                android:paddingLeft="7dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="订单编号"
+                android:textColor="@color/black_2"
+                android:textSize="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/rlGoOrderDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivGoodsImage"
+                    android:layout_width="85dp"
+                    android:layout_height="85dp"
+                    android:layout_marginRight="12dp"
+                    android:src="@mipmap/img_default_image" />
+
+                <TextView
+                    android:id="@+id/tvGoodsName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="20dp"
+                    android:layout_toRightOf="@id/ivGoodsImage"
+                    android:textColor="@color/black_2"
+                    android:textSize="12dp"
+                    tools:text="小刀 一多(ieduo)电动车3C国标60V龟王电摩成人电瓶..." />
+
+                <TextView
+                    android:id="@+id/tvGoodsAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF242323"
+                    android:layout_toRightOf="@id/ivGoodsImage"
+                    android:layout_below="@id/tvGoodsName"
+                    android:textSize="12dp"
+                    android:layout_marginTop="20dp"
+                    android:textStyle="bold"
+                    tools:text="￥123.00" />
+
+                <TextView
+                    android:id="@+id/tvReturnTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/ivGoodsImage"
+                    android:layout_alignParentRight="true"
+                    android:background="#FFFFEED0"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="4dp"
+                    android:text="退款中"
+                    android:textColor="#FFFF8E15"
+                    android:textSize="11dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+            <TextView
+                android:id="@+id/tvGoEvaluate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/bg_0ed4d4_radius22"
+                android:paddingLeft="25dp"
+                android:paddingTop="7dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="7dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="right"
+                android:text="评价"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

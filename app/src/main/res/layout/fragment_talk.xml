@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.talk.TalkFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<!--        <com.linruan.carconnection.view.tablayout.SlidingTabLayout-->
+<!--            android:id="@+id/tabLayout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            app:tl_indicator_width="20dp"-->
+<!--            app:tl_indicator_startcolor="#FFFFFF"-->
+<!--            app:tl_indicator_endcolor="#0ED4D4"/>-->
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:tabTextColor="@color/black_2"
+            app:tabMode="auto"
+            app:tabIndicatorFullWidth="false"
+            app:tabTextAppearance="@style/TablayoutTextStyle"
+            app:tabSelectedTextColor="@color/color_0ed4d4"
+            app:tabIndicator="@drawable/line_indicator"
+            android:paddingBottom="5dp"/>
+
+        <ImageView
+            android:id="@+id/ivGoRelease"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@mipmap/ic_release" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFECECEC" />
+    <com.linruan.carconnection.view.NoneScrollViewPager
+        android:id="@+id/vpBBSs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

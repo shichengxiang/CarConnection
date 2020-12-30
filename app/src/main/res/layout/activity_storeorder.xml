@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/default_bg">
+    <com.linruan.carconnection.view.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#FF0ED4D4"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="#FF333333"
+        app:tabIndicatorHeight="1.5dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabIndicator="@drawable/line_indicator"
+        android:background="@drawable/bg_white_bottom_radius10"
+        android:paddingBottom="7dp"/>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpOrders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/ivIsSelected"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:padding="3dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/selector_cb_circle1" />
+
+    <ImageView
+        android:id="@+id/ivImageOfProduct"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="11dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toRightOf="@id/ivIsSelected"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/img_default_image" />
+
+    <TextView
+        android:id="@+id/tvProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ivImageOfProduct"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@id/ivImageOfProduct"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="小刀 一多(ieduo)电动车3C国标60V龟王电摩成人电瓶车轻便电动摩托车YD800DQT-37 A1 荧光白"
+        android:textColor="@color/black_2"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/tvSku"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvProductName"
+        android:layout_toRightOf="@id/ivImageOfProduct"
+        android:background="@drawable/bg_gray_radius15"
+        android:layout_marginTop="8dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="3dp"
+        tools:text="珍珠白"
+        android:textColor="#242323"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ivImageOfProduct"
+        android:layout_toRightOf="@id/ivImageOfProduct"
+        android:text="1917"
+        android:textColor="#FFFE2A14"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/ivImageOfProduct"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/bg_bfbfbf_stroke_radius22"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingTop="4dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="4dp">
+
+        <ImageView
+            android:id="@+id/ivSubtract"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/ic_substract" />
+
+        <TextView
+            android:id="@+id/tvGoodsNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="1"
+            android:textColor="@color/black_2"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@mipmap/ic_add" />
+    </LinearLayout>
+
+</RelativeLayout>

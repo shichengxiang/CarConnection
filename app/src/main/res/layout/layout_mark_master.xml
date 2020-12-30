@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <TextView
+        android:id="@+id/tvDistance"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="距离"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#FF333333"
+        android:textSize="12dp"
+        android:background="@drawable/bg_white_radius11"
+        android:visibility="gone"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/ic_map_master"/>
+    <TextView
+        android:id="@+id/tvMarkName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF2A2A2A"
+        android:textSize="12dp"
+        android:textStyle="bold"/>
+    <TextView
+        android:id="@+id/tvMarkBusiness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF2A2A2A"
+        android:textSize="10dp"/>
+</LinearLayout>

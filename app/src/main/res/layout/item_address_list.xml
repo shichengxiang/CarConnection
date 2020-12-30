@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlRoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivGoEdit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="6dp"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_edit_pen" />
+
+        <LinearLayout
+            android:id="@+id/llAddressLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="11dp"
+            android:layout_toLeftOf="@id/ivGoEdit"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNamePhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                tools:text="张某某&#12288; &#12288;183****3889" />
+
+            <TextView
+                android:id="@+id/tvArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:textColor="#FF666666"
+                android:textSize="15dp"
+                tools:text="北京朝阳区三环以内北京市朝阳区农光里111号楼一单元102室" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/llAddressLayout"
+            android:background="@color/line_color" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvDelete"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@color/material_red"
+        android:gravity="center"
+        android:text="删除"
+        android:textSize="14dp"
+        android:textColor="@color/white" />
+</LinearLayout>

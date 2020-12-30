@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.linruan.carconnection.view.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFE5E5E5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="关于车联益众"
+            android:textSize="16dp"
+            android:textColor="#FF232323"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="3dp"
+            android:text="品牌精神：脚踏实地行胜于言敬业报国
+经营理念：合作、共赢、整合、利他、互助、抱团、联盟竞争理念：只有合作伙伴，没有竞争对手
+团队理念：将公司打造成军队般的执行力、学校般的学习力、家庭般的幸福工作环境"
+            android:textSize="12dp"
+            android:textColor="#FF232323"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">carrepairapp</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">home</string>
+    <string name="title_dashboard">store</string>
+    <string name="title_notifications">talk</string>
+    <string name="title_mine">mine</string>
+    <string name="placeorder_now">place now</string>
+    <string name="placeoder_quickly">place now</string>
+    <string name="rule_intro">rule intr</string>
+    <string name="s_aboutus">about us</string>
+    <string name="setting">setting</string>
+    <string name="recharge">recharge</string>
+    <string name="registorlogin">regist/login</string>
+    <string name="phone_safe">the phone is safe </string>
+    <integer-array name="material_colors">
+        <item>@color/material_red</item>
+        <item>@color/material_green</item>
+        <item>@color/material_blue</item>
+        <item>@color/material_yellow</item>
+    </integer-array>
+</resources>

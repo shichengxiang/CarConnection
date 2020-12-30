@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.linruan.carconnection.view.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true" />
+
+    <RelativeLayout
+        android:id="@+id/rlChooseType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="投诉类别"
+            android:textColor="@color/black_2"
+            android:textSize="14dp" />
+        <TextView
+            android:id="@+id/tvComplainType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_arrow_right_small"
+            android:padding="15dp"
+            android:drawablePadding="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/black_3"
+            android:textSize="12dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:background="@color/line_color" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="15dp"
+        android:textStyle="bold"
+        android:text="填写反馈信息"
+        android:textColor="@color/black_2"
+        android:textSize="16dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/bg_gray_radius2">
+
+        <EditText
+            android:id="@+id/etInputComplain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left"
+            android:layout_margin="7dp"
+            android:hint="请填写反馈信息..."
+            android:maxLength="200"
+            android:textColor="@color/black_2"
+            android:textSize="12dp"
+            android:background="@null"/>
+        <TextView
+            android:id="@+id/tvInputCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/200"
+            android:textSize="12dp"
+            android:textColor="#999999"
+            android:layout_margin="4dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnCommit"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="14dp"
+        android:background="@drawable/bg_0ed4d4_radius22"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="50dp"/>
+</LinearLayout>

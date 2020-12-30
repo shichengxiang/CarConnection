@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.linruan.carconnection.view.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_height="wrap_content"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#FFE5E5E5"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="27dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="规则介绍"
+            android:textSize="16dp"
+            android:textColor="#FF232323"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:lineSpacingExtra="3dp"
+            android:text="公共生活规则是指全体公民公认并共同遵守的行为准则。社会文明发展水平的标志。在一些重要的社会关系、社会活动和社会交往中表现为人们共同遵守的道德规范，往往由国家提倡或认可；在日常公共生活中表现为起码的调节公共生活的道德规范。对社会风尚有广泛、持久、深刻的影响。"
+            android:textSize="12dp"
+            android:textColor="#FF232323"/>
+    </LinearLayout>
+
+</LinearLayout>

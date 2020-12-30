@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">车联益众</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">首页</string>
+    <string name="title_dashboard">商城</string>
+    <string name="title_notifications">贴吧</string>
+    <string name="title_mine">我的</string>
+    <string name="placeorder_now">立即下单</string>
+    <string name="placeoder_quickly">快速下单</string>
+    <string name="rule_intro">规则介绍</string>
+    <string name="s_aboutus">关于我们</string>
+    <string name="setting">设置</string>
+    <string name="recharge">充值</string>
+    <string name="registorlogin">注册/登录</string>
+    <string name="phone_safe">注册手机号不会被泄露</string>
+    <string name="charging_rule_detail">1.要把产品特点转换为好处 要记得,消费者只想知道你的产品或服务能为他们带来什么好处!而你绝... \n2.主角要是「你」而不是「我/我们」 从消费者的角度出发,为他们展示产品的好处。例如:要写... \n3.要包含能强化可信度的讯息 你要如何让客户能安心跟你做生意。比如可以提到你的公司已经提供这...</string>
+    <string name="confirmorder_rule_detail">1.要把产品特点转换为好处 要记得,消费者只想知道你的产品或服务能为他们带来什么好处!而你绝... \n2.主角要是「你」而不是「我/我们」 从消费者的角度出发,为他们展示产品的好处。例如:要写... \n3.要包含能强化可信度的讯息 你要如何让客户能安心跟你做生意。比如可以提到你的公司已经提供这...</string>
+    <string name="userprotol_privacypolicy">注册/登录即代表同意《车联益众用户协议》与《隐私政策》</string>
+
+    <integer-array name="material_colors">
+        <item>@color/material_red</item>
+        <item>@color/material_green</item>
+        <item>@color/material_blue</item>
+        <item>@color/material_yellow</item>
+    </integer-array>
+</resources>

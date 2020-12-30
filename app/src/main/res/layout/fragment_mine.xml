@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0ED4D4"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFEBEBEB">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rlRMB"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_0ed4d4_top_radius50" />
+
+        <RelativeLayout
+            android:id="@+id/rlUserInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.linruan.carconnection.view.CircleImageView
+                android:id="@+id/iv_head"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginLeft="11dp"
+                android:src="@mipmap/img_default_head"
+                app:civ_border_color="#FF0ED4D4"
+                app:civ_border_width="2dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_head"
+                android:layout_alignBottom="@id/iv_head"
+                android:layout_marginLeft="12dp"
+                android:layout_toRightOf="@id/iv_head"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registorlogin"
+                    android:textColor="#FFF4F4F4"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/tvUserPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/phone_safe"
+                    android:textColor="#FFF4F4F4"
+                    android:textSize="12dp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="12dp"
+            android:padding="3dp"
+            android:src="@drawable/ic_setting" />
+
+        <RelativeLayout
+            android:id="@+id/rlRMB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlUserInfo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_1b1b1b_top_radius10"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_tag_remain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="余额"
+                android:textColor="#FFE0A279"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tag_remain"
+                android:layout_marginTop="10dp"
+                tools:text="4588.00"
+                android:textColor="#FFE0A279"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAmountUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvAmount"
+                android:layout_toRightOf="@id/tvAmount"
+                android:text="RMB"
+                android:textColor="#FFE0A279"
+                android:textSize="11dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_tag_remain"
+                android:layout_alignBottom="@id/tvAmount"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/tvGotoWallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_recharge"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="我的钱包 >"
+                    android:textColor="#FF1B1B1B"
+                    android:textSize="12dp" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:elevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlRepairOrderLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvMaintainOder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="修车订单"
+                        android:textColor="#FF232323"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMoreRepairOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="查看全部 >"
+                        android:textColor="#FF8B8B8B"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvMaintainOder"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/llCarAll"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivRepairWait"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_all" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:layout_below="@id/ivRepairWait"
+                                android:text="待付款"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvRepairWaitCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/ivRepairWait"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llOrderWaitPay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivRepairRunnind"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_waitpay" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="进行中"
+                                android:layout_below="@id/ivRepairRunnind"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llCarOrderFinished"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivRepairFinished"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_orer_finish" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="已完成"
+                                android:layout_below="@id/ivRepairFinished"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvRepairFinishedCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:layout_toRightOf="@id/ivRepairFinished"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:gravity="center"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llCarOrderCancel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivRepairCancel"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_cancel" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="已取消"
+                                android:layout_below="@id/ivRepairCancel"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvRepairCancelCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/ivRepairCancel"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/tvStoreOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="商城订单"
+                        android:textColor="#FF232323"
+                        android:textSize="15dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvMoreStoreOrder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="查看全部 >"
+                        android:textColor="#FF8B8B8B"
+                        android:textSize="12dp" />
+
+                    <LinearLayout
+                        android:id="@+id/llStoreOrders"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tvStoreOrder"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/llStoreOrderWaitPay"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivGoodsWait"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_waitpay" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="待付款"
+                                android:layout_below="@id/ivGoodsWait"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvGoodsWaitCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/ivGoodsWait"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llStoreOrderWaitSend"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivGoodsWaitSend"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_waitsend" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="待发货"
+                                android:layout_below="@+id/ivGoodsWaitSend"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvGoodsWaitSendCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/ivGoodsWaitSend"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llStoreOrderWaitReceived"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivGoodsWaitReceived"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_waitreceiv" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="待收货"
+                                android:layout_below="@id/ivGoodsWaitReceived"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvGoodsWaitReceivedCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:gravity="center"
+                                android:layout_toRightOf="@id/ivGoodsWaitReceived"
+                                android:textColor="@color/white"
+                                android:text="0"
+                                android:visibility="gone"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/llStoreOrderAfterSaled"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/ivGoodsAfter"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@mipmap/ic_order_aftersale" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="退货/售后"
+                                android:layout_below="@id/ivGoodsAfter"
+                                android:textColor="#FF333333"
+                                android:textSize="11dp" />
+                            <TextView
+                                android:id="@+id/tvGoodsAfterCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:background="@drawable/bg_circle_num"
+                                android:textSize="7dp"
+                                android:layout_toRightOf="@id/ivGoodsAfter"
+                                android:textColor="@color/white"
+                                android:text="77"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!--    消息通知-->
+                <RelativeLayout
+                    android:id="@+id/rlGotoMsgUI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_msg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_msg"
+                        android:text="消息通知"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+                <!--    规则介绍-->
+                <RelativeLayout
+                    android:id="@+id/rlGotoRuleUI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_rule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_rule_introduce" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_rule"
+                        android:text="规则介绍"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+
+                <RelativeLayout
+                    android:id="@+id/rlGotoAboutUsUI"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_aboutUs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_aboutus" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_aboutUs"
+                        android:text="关于我们"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+
+                <RelativeLayout
+                    android:id="@+id/rlIntroOfMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_master"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_authentication" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_master"
+                        android:text="维修师傅认证说明"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+                <RelativeLayout
+                    android:id="@+id/rlGotoAuthMaster"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_auth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_authentication" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_auth"
+                        android:text="认证成为修车师傅"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+
+                <RelativeLayout
+                    android:id="@+id/rlCustomService"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="18dp"
+                    android:paddingRight="11dp"
+                    android:paddingBottom="18dp">
+
+                    <ImageView
+                        android:id="@+id/iv_img_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_customservice" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_img_service"
+                        android:text="客服"
+                        android:textColor="#FF333333"
+                        android:textSize="16dp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_arrow_right" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="6dp"
+                    android:background="#FFF2F2F2" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</LinearLayout>

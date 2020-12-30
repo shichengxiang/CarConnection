@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.linruan.carconnection.view.SlidingHomeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/slideLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFDFE2E7"
+    android:clipChildren="false"
+    tools:context=".ui.home.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rlHomeAderts"
+            android:layout_width="match_parent"
+            android:layout_height="120dp">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpHome"
+                android:layout_width="match_parent"
+                android:layout_height="120dp" />
+
+            <com.linruan.carconnection.view.CirclePageIndicator
+                android:id="@+id/circleIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_marginBottom="10dp" />
+        </RelativeLayout>
+
+        <com.amap.api.maps.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/rlHomeAderts"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="210dp" />
+        <ImageView
+            android:id="@+id/ivCallService"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_map_callservice"
+            android:layout_marginLeft="6dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            android:layout_alignBottom="@id/mapView"/>
+        <ImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_map_location"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitCenter"
+            android:layout_alignBottom="@id/mapView"/>
+        <TextView
+            android:id="@+id/tvGoRepairOrderList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您有一条正在进行中的订单"
+            android:layout_alignBottom="@id/mapView"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/bg_white_radius5"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColor="#FF8E15"
+            android:textSize="12dp"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp"/>
+        <include
+            android:id="@+id/layoutPop"
+            layout="@layout/layout_placeorder_wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="6dp"
+            android:layout_alignParentBottom="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <com.linruan.carconnection.view.SlidingView
+        android:id="@+id/llDragView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_white_top_radius10"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="30dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/line_short" />
+
+        <FrameLayout
+            android:id="@+id/flContainer_master"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17dp"
+            android:layout_marginRight="17dp"
+            android:background="@drawable/bg_00d2d2_radius20"
+            android:text="@string/placeoder_quickly"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tvMore"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="向上滑动查看更多"
+            android:textColor="#C8C8C8"
+            android:textSize="12dp" />
+
+        <com.linruan.carconnection.view.refreshlayout.RecyclerViewEmptySupport
+            android:id="@+id/rvHomeMasterList"
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            android:visibility="gone" />
+
+    </com.linruan.carconnection.view.SlidingView>
+</com.linruan.carconnection.view.SlidingHomeLayout>

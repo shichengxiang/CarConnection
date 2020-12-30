@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="13dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="13dp"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/rlGoOrderDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivImageOfOrder"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:src="@mipmap/img_default_image" />
+
+        <TextView
+            android:id="@+id/tvGoodsName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="11dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/tvMoney"
+            android:layout_toRightOf="@id/ivImageOfOrder"
+            tools:text="小刀 一多(ieduo)电动车3C国标60V龟王电摩成人电瓶..."
+            android:textColor="@color/black_2"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/tvGoodsNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvGoodsName"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/ivImageOfOrder"
+            android:text="购买数量：1件"
+            android:textColor="#999999"
+            android:textSize="11dp" />
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="￥123.00"
+            android:layout_alignBottom="@id/ivImageOfOrder"
+            android:textColor="#FB1010"
+            android:textSize="12dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_toRightOf="@id/ivImageOfOrder"
+            android:layout_below="@id/ivImageOfOrder"
+            android:layout_marginTop="20dp"
+            android:background="@color/line_color"/>
+    </RelativeLayout>
+</LinearLayout>

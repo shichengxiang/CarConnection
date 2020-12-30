@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="20dp"
+        android:fitsSystemWindows="true"
+        android:src="@drawable/ic_close_fork" />
+    <LinearLayout
+        android:id="@+id/firstPage"
+        android:layout_below="@id/ivClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/tvRoleTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="绑定手机号"
+            android:textColor="#FF333333"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="+86"
+                android:textColor="@color/black_2" />
+
+            <View
+                android:id="@+id/lineVer"
+                android:layout_width="0.5dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_toRightOf="@id/tvPre"
+                android:background="@color/line_color" />
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toLeftOf="@+id/ivClear"
+                android:layout_toRightOf="@id/lineVer"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:inputType="phone"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:textColorHint="#FFD7D7D7"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/ivClear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_close_fork_gray_small" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cbRedProtocol"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/selector_cb_circle1"
+                android:button="@null"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/tvShowProtocol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/userprotol_privacypolicy"
+                android:textColor="#FF333333"
+                android:textSize="12dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSendSms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/bg_0ed4d4_radius22"
+            android:text="发送验证码"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/secondPage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_below="@id/ivClose"
+        android:layout_marginRight="26dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvSmsTip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="38dp"
+            android:text="输入验证码"
+            android:textColor="#FF333333"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="短信已发送至+86"
+            android:textColor="#B0B0B0"
+            android:textSize="12dp" />
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/etNum1"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/etNum2"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/etNum3"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/etNum4"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/etNum5"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/etNum6"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_bottomline"
+                android:gravity="center_horizontal"
+                android:maxLength="1"
+                android:textColor="#111E36"
+                android:textSize="18dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSmsCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="重新获取"
+            android:textColor="#B0B0B0"
+            android:textSize="12dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

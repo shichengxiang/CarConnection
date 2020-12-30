@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tvPartName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:textColor="#6F6F6F"
+        android:textSize="13dp"
+        tools:text="电瓶" />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_toLeftOf="@id/llRight"-->
+<!--        android:text="¥"-->
+<!--        android:textColor="@color/black_2"-->
+<!--        android:textSize="13dp" />-->
+
+    <LinearLayout
+        android:id="@+id/llRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/tvPartPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginLeft="2dp"
+            android:gravity="right"
+            android:inputType="numberDecimal"
+            android:maxLength="8"
+            android:hint="¥ 0.00"
+            android:paddingTop="3dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="3dp"
+            android:textColor="@color/black_2"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/layer_ic_edit_pen" />
+
+    </LinearLayout>
+
+</RelativeLayout>

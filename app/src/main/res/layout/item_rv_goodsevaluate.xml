@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <com.linruan.carconnection.view.CircleImageView
+            android:id="@+id/ivHead"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:src="@mipmap/img_default_head" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/ivHead"
+            android:text="C***K"
+            android:textColor="#333333"
+            android:textSize="12dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ivHead"
+            android:layout_toRightOf="@id/ivHead"
+            android:text="2019-3-5"
+            android:textColor="#999999"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvEvaluate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:ellipsize="end"
+        tools:text="买车的时候客服告诉我是新款！升级过后的，想象不出来是什么样的，客服小姐姐告诉我比原来的增加了，仪表，后坐垫，还有脚踏，不是专业的，整不明白、买回来，脚踏和后坐垫是真新增虽..."
+        android:textColor="#333333"
+        android:textSize="12dp" />
+
+</LinearLayout>

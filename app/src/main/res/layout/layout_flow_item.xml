@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="6dp"
+    android:text="电瓶漏电"
+    android:textColor="@color/selector_icon_color"
+    android:textSize="15dp"
+    android:id="@+id/tvTag"
+    android:gravity="center"
+    android:paddingLeft="10dp"
+    android:layout_marginTop="6dp"
+    android:paddingRight="10dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp"
+    android:background="@drawable/selector_tag_cause">
+</TextView>

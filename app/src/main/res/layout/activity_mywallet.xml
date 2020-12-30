@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipChildren="false"
+    android:orientation="vertical">
+
+    <com.linruan.carconnection.view.ToolBar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0ED4D4"
+        android:fitsSystemWindows="true" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0ED4D4">
+
+        <RelativeLayout
+            android:id="@+id/rlRMB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlUserInfo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/bg_1b1b1b_top_radius10"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tv_tag_remain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可用额度"
+                android:textColor="#FFE0A279"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_tag_remain"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textColor="#FFE0A279"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvAmountUnit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tvAmount"
+                android:layout_toRightOf="@id/tvAmount"
+                android:text="RMB"
+                android:textColor="#FFE0A279"
+                android:textSize="11dp" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/tv_tag_remain"
+                android:layout_alignBottom="@id/tvAmount"
+                android:layout_alignParentRight="true">
+
+                <TextView
+                    android:id="@+id/tvGotoRecharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_recharge"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="6dp"
+                    android:text="去充值"
+                    android:textColor="#FF1B1B1B"
+                    android:textSize="12dp" />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+    <!--    列表切换-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F2F2F2"
+        android:clipChildren="false"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TabAllRecord"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            android:background="@mipmap/img_tab_rect"
+            android:gravity="center"
+            android:text="全部记录"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tabOrderRecord"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="维修记录"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+
+        <TextView
+            android:id="@+id/tabShopRecord"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="购物记录"
+            android:textColor="#666666"
+            android:textSize="13dp" />
+    </LinearLayout>
+    <com.linruan.carconnection.view.refreshlayout.MRefreshLayout
+        android:id="@+id/mRefreshLayout"
+        android:layout_marginTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

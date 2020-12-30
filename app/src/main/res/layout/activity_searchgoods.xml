@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF0ED4D4"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF0ED4D4"
+        android:fitsSystemWindows="true"
+        app:contentInsetStart="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FF0ED4D4"
+            android:fitsSystemWindows="true"
+            android:padding="6dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="3dp"
+                android:src="@drawable/ic_back_white" />
+
+            <LinearLayout
+                android:id="@+id/llSearchLayout"
+                android:layout_width="match_parent"
+                android:layout_height="26dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="13dp"
+                android:layout_toRightOf="@id/ivBack"
+                android:background="@drawable/bg_white_radius14"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:transitionName="search">
+                <LinearLayout
+                    android:id="@+id/searchTagLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/bg_gray_radius15"
+                    android:layout_marginLeft="3dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/tvSearchKeyWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自行车"
+                        android:textSize="10dp"
+                        android:gravity="center"
+                        android:textColor="#5F5D5D"/>
+                    <ImageView
+                        android:id="@+id/ivRemoveKeyWord"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:src="@drawable/ic_close_fork_gray_small"
+                        android:layout_marginLeft="6dp"
+                        android:outlineSpotShadowColor="@color/black_3"/>
+                </LinearLayout>
+                <EditText
+                    android:id="@+id/etInputSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/ic_search"
+                    android:drawablePadding="8dp"
+                    android:lines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:hint="云南甜玉米"
+                    android:textColor="#FFB1B1B1"
+                    android:textSize="10dp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/default_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlFiltrates"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCompositeFiltrate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingLeft="28dp"
+                android:paddingRight="28dp"
+                android:text="综合"
+                android:textColor="@color/selector_icon_color"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/tvSalesFiltrate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="销量"
+                android:textColor="@color/selector_icon_color"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/tvBrandFiltrate"
+                android:background="@color/line_color" />
+
+            <TextView
+                android:id="@+id/tvBrandFiltrate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingLeft="17dp"
+                android:paddingRight="28dp"
+                android:text="品牌"
+                android:textColor="@color/selector_icon_color"
+                android:textSize="12dp" />
+        </RelativeLayout>
+        <com.linruan.carconnection.view.refreshlayout.MRefreshLayout
+            android:id="@+id/mRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+</LinearLayout>

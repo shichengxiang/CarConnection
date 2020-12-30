@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:id="@+id/itemLayout">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@mipmap/img_default_image"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical">
+        <RelativeLayout
+            android:id="@+id/rl_topName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvMasterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="师傅姓名"
+                android:textColor="#FF333333"
+                android:layout_toLeftOf="@id/tvOrderNum"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/tvOrderNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="已接：20单"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="18dp"
+                android:textColor="#FFB8B8B8"
+                android:textSize="11dp"/>
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvMonopoly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="本店专营/ 摩托维修 摩托保养 摩托出售"
+            android:textSize="12dp"
+            android:textColor="#797979"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tvCommentNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="评价（）"
+                android:textColor="#B3B3B3"
+                android:textSize="11dp"/>
+            <TextView
+                android:id="@+id/tvWorkTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="9：00-18：00"
+                android:textColor="#B3B3B3"
+                android:textSize="11dp"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawablePadding="6dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
